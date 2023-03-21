@@ -12,7 +12,7 @@ class Animal:
     def totalPorTipo(cls):
         return "Mamiferos : " + str(zooAnimales.mamifero.Mamifero.cantidadMamiferos()) + "\nAves : " + str(zooAnimales.ave.Ave.cantidadAves()) + "\nReptiles : " + str(zooAnimales.reptil.Reptil.cantidadReptiles()) + "\nPeces : " + str(zooAnimales.pez.Pez.cantidadPeces()) + "\nAnfibios : " + str(zooAnimales.anfibio.Anfibio.cantidadAnfibios())
     
-    def __str__(self):
+    def toString(self):
         datos = "Mi nombre es " + self._nombre + ", tengo una edad de " + str(self._edad) + ", habito en " + self._habitat + " y mi genero es " + self._genero
         if self._zona != None:
             datos += ", la zona en la que me ubico es " + self._zona + ", en el " + self._zona.getZoo()
