@@ -13,25 +13,27 @@ class Pez(Animal):
     def movimiento(self):
         return "nadar"
     
-    @staticmethod
+    @classmethod
     def cantidadPeces(cls):
-        return len(Pez._listado)
+        return len(cls._listado)
     
-    @staticmethod
+    @classmethod
     def crearSalmon(cls, nombre, edad, genero):
-        Pez.salmones += 1
+        cls.salmones += 1
         return Pez(nombre, edad, "oceano", genero, "rojo", 6)
     
-    @staticmethod
+    @classmethod
     def crearBacalao(cls, nombre, edad, genero):
-        Pez.bacalaos += 1
+        cls.bacalaos += 1
         return Pez(nombre, edad, "oceano", genero, "gris", 6)
     
-    def getListado(self):
-        return Pez._listado
+    @classmethod
+    def getListado(cls):
+        return cls._listado
     
-    def setListado(self, listado):
-        Pez._listado = listado
+    @classmethod
+    def setListado(cls, listado):
+        cls._listado = listado
 
     def getColorEscamas(self):
         return self._colorEscamas

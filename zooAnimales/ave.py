@@ -12,25 +12,27 @@ class Ave(Animal):
     def movimiento(self):
         return "volar"
     
-    @staticmethod
+    @classmethod
     def cantidadAves(cls):
-        return len(Ave._listado)
+        return len(cls._listado)
     
-    @staticmethod
+    @classmethod
     def crearHalcon(cls, nombre, edad, genero):
-        Ave.halcones += 1
+        cls.halcones += 1
         return Ave(nombre, edad, "montanas", genero, "cafe glorioso")
     
-    @staticmethod
+    @classmethod
     def crearAguila(cls, nombre, edad, genero):
-        Ave.aguilas += 1
+        cls.aguilas += 1
         return Ave(nombre, edad, "montanas", genero, "blanco y amarillo")
     
-    def getListado(self):
-        return Ave._listado
+    @classmethod
+    def getListado(cls):
+        return cls._listado
     
-    def setListado(self, listado):
-        Ave._listado = listado
+    @classmethod
+    def setListado(cls, listado):
+        cls._listado = listado
 
     def getColorPlumas(self):
         return self._colorPlumas

@@ -13,25 +13,27 @@ class Reptil(Animal):
     def movimiento(self):
         return "reptar"
     
-    @staticmethod
+    @classmethod
     def cantidadReptiles(cls):
-        return len(Reptil._listado)
+        return len(cls._listado)
     
-    @staticmethod
+    @classmethod
     def crearIguana(cls, nombre, edad, genero):
         Reptil.iguanas += 1
         return Reptil(nombre, edad, "humedal", genero, "verde", 3)
     
-    @staticmethod
+    @classmethod
     def crearSerpiente(cls, nombre, edad, genero):
         Reptil.serpientes += 1
         return Reptil(nombre, edad, "jungla", genero, "blanco", 1)
     
-    def getListado(self):
-        return Reptil._listado
+    @classmethod
+    def getListado(cls):
+        return cls._listado
     
-    def setListado(self, listado):
-        Reptil._listado = listado
+    @classmethod
+    def setListado(cls, listado):
+        cls._listado = listado
 
     def getColorEscamas(self):
         return self._colorEscamas

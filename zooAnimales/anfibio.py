@@ -13,25 +13,27 @@ class Anfibio(Animal):
     def movimiento(self):
         return "saltas"
     
-    @staticmethod
+    @classmethod
     def cantidadAnfibios(cls):
-        return len(Anfibio._listado)
+        return len(cls._listado)
     
-    @staticmethod
+    @classmethod
     def crearRana(cls, nombre, edad, genero):
-        Anfibio.iguanas += 1
+        cls.iguanas += 1
         return Anfibio(nombre, edad, "selva", genero, "rojo", True)
     
-    @staticmethod
+    @classmethod
     def crearSalamandra(cls, nombre, edad, genero):
-        Anfibio.serpientes += 1
+        cls.serpientes += 1
         return Anfibio(nombre, edad, "selva", genero, "negro y amarillo", False)
     
-    def getListado(self):
-        return Anfibio._listado
+    @classmethod
+    def getListado(cls):
+        return cls._listado
     
-    def setListado(self, listado):
-        Anfibio._listado = listado
+    @classmethod
+    def setListado(cls, listado):
+        cls._listado = listado
 
     def getColorPiel(self):
         return self._colorPiel
