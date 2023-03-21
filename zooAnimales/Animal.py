@@ -4,7 +4,7 @@ from zooAnimales import Anfibio
 from zooAnimales import Pez
 from zooAnimales import Reptil
 
-from gestion.zona import Zona
+from gestion import Zona
 class Animal:
     _totalAnimales = 0
     _zona = None
