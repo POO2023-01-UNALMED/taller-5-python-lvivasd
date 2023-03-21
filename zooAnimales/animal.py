@@ -13,7 +13,7 @@ class Animal:
         return "Mamiferos: " + zooAnimales.mamifero.Mamifero.cantidadMamiferos() + "\nAves: " + zooAnimales.ave.Ave.cantidadAves() + "\nReptiles: " + zooAnimales.reptil.Reptil.cantidadReptiles() + "\nPeces: " + zooAnimales.pez.Pez.cantidadPeces() + "\nAnfibios: " + zooAnimales.anfibio.Anfibio.cantidadAnfibios()
     
     def __str__(self):
-        datos = "Mi nombre es " + self._nombre + ", tengo una edad de " + self._edad + ", habito en " + self._habitat + " y mi genero es " + self._genero
+        datos = "Mi nombre es " + self._nombre + ", tengo una edad de " + str(self._edad) + ", habito en " + self._habitat + " y mi genero es " + self._genero
         if self._zona != None:
             datos += ", la zona en la que me ubico es " + self._zona + ", en el " + self._zona.getZoo()
         
