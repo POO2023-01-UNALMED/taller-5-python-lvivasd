@@ -10,7 +10,7 @@ class Animal:
 
     @classmethod
     def totalPorTipo(cls):
-        return "Mamiferos: " + zooAnimales.mamifero.Mamifero.cantidadMamiferos() + "\nAves: " + zooAnimales.ave.Ave.cantidadAves() + "\nReptiles: " + zooAnimales.reptil.Reptil.cantidadReptiles() + "\nPeces: " + zooAnimales.pez.Pez.cantidadPeces() + "\nAnfibios: " + zooAnimales.anfibio.Anfibio.cantidadAnfibios()
+        return "Mamiferos: " + str(zooAnimales.mamifero.Mamifero.cantidadMamiferos()) + "\nAves: " + str(zooAnimales.ave.Ave.cantidadAves()) + "\nReptiles: " + str(zooAnimales.reptil.Reptil.cantidadReptiles()) + "\nPeces: " + str(zooAnimales.pez.Pez.cantidadPeces()) + "\nAnfibios: " + str(zooAnimales.anfibio.Anfibio.cantidadAnfibios())
     
     def __str__(self):
         datos = "Mi nombre es " + self._nombre + ", tengo una edad de " + str(self._edad) + ", habito en " + self._habitat + " y mi genero es " + self._genero
