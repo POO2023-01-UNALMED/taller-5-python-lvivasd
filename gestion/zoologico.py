@@ -1,9 +1,10 @@
 from gestion.zona import Zona
 class Zoologico:
-    _zonas = list()
+    
     def __init__(self, nombre = "", ubicacion = ""):
         self._nombre = nombre
         self._ubicacion = ubicacion
+        self._zonas = list()
     
     def cantidadTotalAnimales(self):
         cantidad1 = 0
