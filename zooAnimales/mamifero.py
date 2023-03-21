@@ -11,16 +11,16 @@ class Mamifero(Animal):
 
     @staticmethod
     def cantidadMamiferos(cls):
-        return len(Mamifero._listado)
+        return len(cls._listado)
     
     @staticmethod
     def crearCaballo(cls, nombre, edad, genero):
-        Mamifero.caballos += 1
+        cls.caballos += 1
         return Mamifero(nombre, edad, "pradera", genero, True, 4)
     
     @staticmethod
     def crearLeon(cls, nombre, edad, genero):
-        Mamifero.leones += 1
+        cls.leones += 1
         return Mamifero(nombre, edad, "selva", genero, True, 4)
     
     def getListado(self):
