@@ -1,8 +1,10 @@
-from gestion import Mamifero
-from gestion import Ave
-from gestion import Anfibio
-from gestion import Pez
-from gestion import Reptil
+from zooAnimales import Mamifero
+from zooAnimales import Ave
+from zooAnimales import Anfibio
+from zooAnimales import Pez
+from zooAnimales import Reptil
+
+from gestion.Zona import Zona
 class Animal:
     _totalAnimales = 0
     _zona = None
